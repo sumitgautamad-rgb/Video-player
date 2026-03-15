@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Player</title>
+
+<style>
+body{
+background:black;
+margin:0;
+text-align:center;
+color:white;
+font-family:sans-serif;
+}
+
+video{
+width:100%;
+height:auto;
+}
+
+.ad{
+margin:10px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP BANNER AD -->
+<div class="ad">
+<!-- YAHAN TOP BANNER AD CODE PASTE KARO -->
+</div>
+
+<h2>Watch Video</h2>
+
+<video id="player" controls></video>
+
+<!-- BOTTOM BANNER AD -->
+<div class="ad">
+<!-- YAHAN BOTTOM BANNER AD CODE PASTE KARO -->
+</div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search)
+let video = params.get("v")
+
+let player = document.getElementById("player")
+
+player.src = video
+
+// POPUP AD WHEN VIDEO STARTS
+player.addEventListener("play", function(){
+window.open("YAHAN_APNA_POPUP_AD_LINK_DALO")
+})
+
+</script>
+
+</body>
+</html>
