@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Watch Video</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+margin:0;
+background:#0f0f0f;
+color:white;
+font-family:sans-serif;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:15px;
+}
+
+.player-box{
+position:relative;
+}
+
+video{
+width:100%;
+border-radius:10px;
+background:black;
+}
+
+.ad{
+margin:15px 0;
+}
+
+h2{
+font-weight:500;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TOP AD -->
+
+<div class="ad">
+
+<!-- PASTE YOUR TOP BANNER AD CODE HERE -->
+
+</div>
+
+<h2>Watch Video</h2>
+
+<div class="player-box">
+
+<video id="player" controls="controls"></video>
+
+</div>
+
+<!-- BOTTOM AD -->
+
+<div class="ad">
+
+<!-- PASTE YOUR BOTTOM BANNER AD CODE HERE -->
+
+</div>
+
+</div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search)
+
+let video = params.get("v")
+
+let player = document.getElementById("player")
+
+player.src = video
+
+
+// POPUP AD WHEN VIDEO STARTS
+
+player.addEventListener("play", function(){
+
+window.open("https://YOUR_AD_LINK_HERE")
+
+})
+
+</script>
+
+</body>
+</html>
